@@ -5,6 +5,15 @@ module.exports = {
     moduleNameMapper: {
         '^lodash-es$': 'lodash',
     },
+
+    globals: {
+        __TRANSFORM_HTML__: true,
+    },
+    transform: {
+        '^.+\\.(ts|js|html)$': 'ts-jest',
+    },
+    moduleFileExtensions: ['ts', 'html', 'js', 'json'],
+
     transformIgnorePatterns: ['node_modules/(?!@storybook/*)'],
     testPathIgnorePatterns: [
         '<rootDir>/node_modules/',
